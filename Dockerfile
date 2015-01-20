@@ -15,5 +15,5 @@ RUN mv slurm-14.03.3-2 slurm
 ADD wiki2-multifactor.patch /slurm/
 RUN cd /slurm;cat wiki2-multifactor.patch | patch -p0
 RUN cd /slurm;./configure --prefix=/usr
-RUN cd /slurm;make -j 2 install
+RUN cd /slurm;make -j 2 install;make clean
 
