@@ -10,8 +10,8 @@ RUN apt-get update
 RUN apt-get install -y munge libmunge-dev git build-essential curl
 
 #probably a better way to do this install
-RUN curl http://www.schedmd.com/download/latest/slurm-14.11.5.tar.bz2 | tar xjf -
-RUN mv slurm-14.11.5 slurm
+RUN curl http://www.schedmd.com/download/archive/slurm-2.4.5.tar.bz2 | tar xjf -
+RUN mv slurm-2.4.5 slurm
 RUN cd /slurm;./configure --prefix=/usr
 RUN cd /slurm;make -j 2 install;make clean
 
